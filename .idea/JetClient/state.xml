@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="draftsState">
+      <draftsState>
+        <option name="requests">
+          <list>
+            <requestState>
+              <option name="id" value="96f7078d-cd3a-40df-a255-4b18548656ff" />
+              <option name="method" value="GET" />
+              <option name="name" value="homeRoute" />
+              <option name="url" value="{{baseURL}}/v1/healthz" />
+            </requestState>
+            <requestState>
+              <option name="id" value="1450be3a-aca8-4ac3-9a43-81b367c0995d" />
+              <option name="method" value="GET" />
+              <option name="name" value="errRoute" />
+              <option name="url" value="{{baseURL}}/v1/err" />
+            </requestState>
+          </list>
+        </option>
+      </draftsState>
+    </option>
+    <option name="folders">
+      <list>
+        <folderState>
+          <option name="apis">
+            <list>
+              <integrationProperties>
+                <option name="name" value="API" />
+              </integrationProperties>
+            </list>
+          </option>
+          <option name="environmentGroups">
+            <list>
+              <environmentGroupState>
+                <option name="name" value="Default" />
+              </environmentGroupState>
+            </list>
+          </option>
+          <option name="id" value="8f41e3af-a874-4119-8903-6eca078873c3" />
+          <option name="name" value="FirstApi" />
+          <option name="selectedEnvironmentIds">
+            <map>
+              <entry key="default" />
+            </map>
+          </option>
+          <option name="syncProperties">
+            <synchronizationPropertiesState>
+              <option name="autoSync" value="true" />
+              <option name="folderPath" value="$PROJECT_DIR$/.jetclient" />
+            </synchronizationPropertiesState>
+          </option>
+        </folderState>
+      </list>
+    </option>
+    <option name="id" value="968f4d91-b76f-4e9f-b2c0-6e1265192be6" />
+    <option name="version" value="6" />
+  </component>
+</project>
