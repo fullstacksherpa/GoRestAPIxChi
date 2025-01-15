@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// Send an HTTP response with a JSON payload.
 func responseWithJSON(w http.ResponseWriter, code int, payload interface{}) error {
 	dat, err := json.Marshal(payload)
 	if err != nil {

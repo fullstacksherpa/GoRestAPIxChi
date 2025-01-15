@@ -17,6 +17,53 @@
               <option name="name" value="errRoute" />
               <option name="url" value="{{baseURL}}/v1/err" />
             </requestState>
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="raw" value="{&#10;  &quot;name&quot;: &quot;joe&quot;&#10;}" />
+                  <option name="type" value="JSON" />
+                </bodyState>
+              </option>
+              <option name="id" value="5a015715-6c9d-446e-893e-e33953ac9d67" />
+              <option name="method" value="POST" />
+              <option name="name" value="CreateUser" />
+              <option name="url" value="http://localhost:8000/v1/users" />
+            </requestState>
+            <requestState>
+              <option name="description" value="Put Authorization: ApiKey {value}" />
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Authorization" />
+                    <option name="value" value="ApiKey 5cd52ef350cf20b30f946983a8f09a38ea963d04141ce2ee0dd8b1cfd4942382" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="f23b3e19-9f1d-414c-be74-dd2cfd86cc06" />
+              <option name="method" value="GET" />
+              <option name="name" value="getUser" />
+              <option name="url" value="http://localhost:8000/v1/users" />
+            </requestState>
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="raw" value="{&#10;  &quot;name&quot;: &quot;Abiedu&quot;,&#10;  &quot;url&quot;: &quot;https://rss.app/feeds/0Xb40eZBrAyCqbbD.xml&quot;&#10;}" />
+                  <option name="type" value="JSON" />
+                </bodyState>
+              </option>
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Authorization" />
+                    <option name="value" value="ApiKey 5cd52ef350cf20b30f946983a8f09a38ea963d04141ce2ee0dd8b1cfd4942382" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="5f04ea1a-5c63-44ff-aef0-7f31d81fbc56" />
+              <option name="method" value="POST" />
+              <option name="name" value="createFeeds" />
+              <option name="url" value="http://localhost:8000/v1/feeds" />
+            </requestState>
           </list>
         </option>
       </draftsState>
