@@ -47,7 +47,7 @@
             <requestState>
               <option name="body">
                 <bodyState>
-                  <option name="raw" value="{&#10;  &quot;name&quot;: &quot;Abiedu&quot;,&#10;  &quot;url&quot;: &quot;https://rss.app/feeds/0Xb40eZBrAyCqbbD.xml&quot;&#10;}" />
+                  <option name="raw" value="{&#10;  &quot;name&quot;: &quot;Garbage Blog&quot;,&#10;  &quot;url&quot;: &quot;https://garbageblourl/0Xb40eZBrAyCqbbD.xml&quot;&#10;}" />
                   <option name="type" value="JSON" />
                 </bodyState>
               </option>
@@ -63,6 +63,60 @@
               <option name="method" value="POST" />
               <option name="name" value="createFeeds" />
               <option name="url" value="http://localhost:8000/v1/feeds" />
+            </requestState>
+            <requestState>
+              <option name="id" value="ebf8f08d-e103-4e84-a2be-b5c7795a31fd" />
+              <option name="method" value="GET" />
+              <option name="name" value="getFeeds" />
+              <option name="url" value="http://localhost:8000/v1/feeds" />
+            </requestState>
+            <requestState>
+              <option name="body">
+                <bodyState>
+                  <option name="raw" value="{&#10;  &quot;feed_id&quot;: &quot;5eddd0fe-2ed2-463d-9ac4-b07c47ac2918&quot;&#10;}" />
+                  <option name="type" value="JSON" />
+                </bodyState>
+              </option>
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Authorization" />
+                    <option name="value" value="ApiKey 5cd52ef350cf20b30f946983a8f09a38ea963d04141ce2ee0dd8b1cfd4942382" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="0527e388-0687-4576-925a-4ce69cddeb47" />
+              <option name="method" value="POST" />
+              <option name="name" value="createFeedFollow" />
+              <option name="url" value="http://localhost:8000/v1/feed_follows" />
+            </requestState>
+            <requestState>
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Authorization" />
+                    <option name="value" value="ApiKey 5cd52ef350cf20b30f946983a8f09a38ea963d04141ce2ee0dd8b1cfd4942382" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="5a00da81-c3ed-45cd-8247-58bf128ae55b" />
+              <option name="method" value="GET" />
+              <option name="name" value="getFeedFollows" />
+              <option name="url" value="http://localhost:8000/v1/feed_follows" />
+            </requestState>
+            <requestState>
+              <option name="headers">
+                <list>
+                  <headerState>
+                    <option name="key" value="Authorization" />
+                    <option name="value" value="ApiKey 5cd52ef350cf20b30f946983a8f09a38ea963d04141ce2ee0dd8b1cfd4942382 &#10;" />
+                  </headerState>
+                </list>
+              </option>
+              <option name="id" value="dbf20481-76be-4389-93f1-7739ed8377ea" />
+              <option name="method" value="DELETE" />
+              <option name="name" value="deleteFeedFollow" />
+              <option name="url" value="http://localhost:8000/v1/feed_follows/abfc10c9-aea8-48ab-a70b-f71366614f1e" />
             </requestState>
           </list>
         </option>

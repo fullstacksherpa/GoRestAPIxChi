@@ -4,6 +4,7 @@ import (
 	"Todolist/internal/database"
 	"encoding/json"
 	"fmt"
+	"github.com/go-chi/chi/v5"
 	"github.com/google/uuid"
 	"net/http"
 	"time"
@@ -33,4 +34,31 @@ func (apiCfg *apiConfig) handlerCreateFeedFollow(w http.ResponseWriter, r *http.
 		return
 	}
 	responseWithJSON(w, 201, databaseFeedFollowToFeedFollow(feedFollow))
+}
+
+func (apiCfg *apiConfig) handleGetFeedFollows(w http.ResponseWriter, r *http.Request, user database.User) {
+
+	feedFollows, err := apiCfg.DB.GetFeedFollows(r.Context(), user.ID)
+	if err != nil {
+		responseWithError(w, 400, fmt.Sprintf("Couldn't get feeds: %v", err))
+		return
+	}
+	responseWithJSON(w, 201, databaseFeedFollowsToFeedFollows(feedFollows))
+}
+
+func (apiCfg *apiConfig) handlerDeleteFeedFollow(w http.ResponseWriter, r *http.Request, user database.User) {
+	feedFollowIDStr := chi.URLParam(r, "feedFollowID")
+	feedFollowID, err := uuid.Parse(feedFollowIDStr)
+	if err != nil {
+		responseWithError(w, 400, fmt.Sprintf("Couldn't parse feed follow id: %v", err))
+	}
+	err = apiCfg.DB.DeleteFeedFollow(r.Context(), database.DeleteFeedFollowParams{
+		ID:     feedFollowID,
+		UserID: user.ID,
+	})
+	if err != nil {
+		responseWithError(w, 400, fmt.Sprintf("Couldn't Delete Feed Follow: %v", err))
+		return
+	}
+	responseWithJSON(w, 200, struct{}{})
 }
