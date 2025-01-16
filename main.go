@@ -59,6 +59,9 @@ func main() {
 	v1Router.Get("/users", apiCfg.middlewareAuth(apiCfg.handleGetUser))
 
 	v1Router.Post("/feeds", apiCfg.middlewareAuth(apiCfg.handleCreateFeed))
+	v1Router.Get("/feeds", apiCfg.handlerGetFeeds)
+	v1Router.Post("/feed_follows", apiCfg.middlewareAuth(apiCfg.handlerCreateFeedFollow))
+
 	router.Mount("/v1", v1Router)
 
 	if serveErr := http.ListenAndServe(":"+portString, router); serveErr != nil {
